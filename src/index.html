@@ -1,18 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <title>Desenvolvedor M3</title>
   <link rel="stylesheet" href="main.css" />
 </head>
 
 <body>
+    <nav>
+        <div class="logo"><img src="./img/logo-m3.png" alt=""></div>
+        <div class="carrinho" id="carrinho">🛒</div>
+    </nav>
+
+    <section class="main" id="main">
+
+      <section class="main-topo">
+        <div class="direita-topo">
+          <h2>Blusas</h2>
+        </div>
+        <div class="esquerda-topo">
+          <select name="ordenar" id="ordenar">
+            <option value="1" disabled selected hidden>Ordenar por:</option>
+            <option value="2">Mais relevantes</option>
+            <option value="3">Menor preço</option>
+            <option value="4" >Maior preço</option>
+          </select>
+        </div>
+      </section>
+
+      <section id="grid-mid" class="grid-mid">
+        <div class="filtros esquerda" id="filtros">
+          <div class="filtroCor">
+            <h2>CORES</h2>
+            <div>
+              <input type="checkbox" name="Amarelo" class="checkbox">
+              <label for="Amarelo">Amarelo</label>
+            </div>
+            <div>
+              <input type="checkbox" name="Azul" class="checkbox">
+              <label for="Azul">Azul</label>
+            </div>
+            <div>
+              <input type="checkbox" name="Branco" class="checkbox">
+              <label for="Branco">Branco</label>
+            </div>
+            <div>
+              <input type="checkbox" name="Cinza" class="checkbox">
+              <label for="Cinza">Cinza</label>
+            </div>
+            <div>
+              <input type="checkbox" name="Laranja" class="checkbox">
+              <label for="Laranja">Laranja</label>
+            </div>
+            <div id="mobile">
+              <input type="checkbox" name="Verde" class="checkbox">
+              <label for="Verde">Verde</label>
+            </div>
+            <div id="mobile">
+              <input type="checkbox" name="Vermelho" class="checkbox">
+              <label for="Vermelho">Vermelho</label>
+            </div>
+            <div id="mobile">
+              <input type="checkbox" name="Preto" class="checkbox">
+              <label for="Preto">Preto</label>
+            </div>
+            <div id="mobile">
+              <input type="checkbox" name="Rosa" class="checkbox">
+              <label for="Rosa">Rosa</label>
+            </div>
+            <div id="mobile">
+              <input type="checkbox" name="Vinho" class="checkbox">
+              <label for="Vinho">Vinho</label>
+            </div>
+            <p class="mostrar-mais">Ver todas as cores</p>
+          </div>
+
+          <div class="filtroTamanhos">
+            <h2>TAMANHOS</h2>
+            <div class="grid-tamanho">
+              <div>
+                <input type="checkbox" name="P" class="checkboxTamanho">
+                <label for="P">P</label>
+              </div>
+              <div>
+                <input type="checkbox" name="M" class="checkboxTamanho">
+                <label for="M">M</label>
+              </div>
+              <div>
+                <input type="checkbox" name="G" class="checkboxTamanho">
+                <label for="G">G</label>
+              </div>
+              <div>
+                <input type="checkbox" name="GG" class="checkboxTamanho">
+                <label for="GG">GG</label>
+              </div>
+              <div>
+                  <input type="checkbox" name="U" class="checkboxTamanho">
+                  <label for="U">U</label>
+              </div>
+              <div>
+                  <input type="checkbox" name="36" class="checkboxTamanho">
+                  <label for="36">36</label>
+              </div>
+              <div>
+                  <input type="checkbox" name="38" class="checkboxTamanho">
+                  <label for="38">38</label>
+              </div>
+              <div>
+                  <input type="checkbox" name="40" class="checkboxTamanho">
+                  <label for="40">40</label>
+              </div>
+              <div>
+                  <input type="checkbox" name="42" class="checkboxTamanho">
+                  <label for="42">42</label>
+              </div>
+              <div>
+                  <input type="checkbox" name="44" class="checkboxTamanho">
+                  <label for="44">44</label>
+              </div>
+              <div>
+                  <input type="checkbox" name="46" class="checkboxTamanho">
+                  <label for="46">46</label>
+              </div>
+              </div>
+            </div>
+
+            <!--Filtro Faixa de Preço-->
+            <div class="filtroPreco">
+              <h2>FAIXA DE PREÇO</h2>
+              <div>
+                <input type="checkbox" name="50" min="0" max="50" class="checkboxPreco">
+                <label for="50">de R$0 até R$50</label>
+              </div>
+              <div>
+                <input type="checkbox" name="150" min="51" max="150" class="checkboxPreco">
+                <label for="150">de R$51 até R$150</label>
+              </div>
+              <div>
+                <input type="checkbox" name="300" min="151" max="300" class="checkboxPreco">
+                <label for="300">de R$151 até R$300</label>
+              </div>
+              <div>
+                <input type="checkbox" name="500" min="301" max="500" class="checkboxPreco">
+                <label for="500">de R$301 até R$500</label>
+              </div>
+              <div>
+                <input type="checkbox" name="501" min="501" class="checkboxPreco">
+                <label for="501">a partir de R$500</label>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          
+        <div class="produtos direita" id="produtos"></div>
+      </section>
+
+    </section>
+
+    <footer>Yuri Bom Ribeiro</footer>
 
 </body>
-<h1>Desafio m3</h1>
 
 <script src="bundle.js"></script>
 
