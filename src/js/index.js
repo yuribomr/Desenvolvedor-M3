@@ -1,8 +1,3 @@
-function attach(element, listener, ev, tf) {
-  if (element.attachEvent) element.attachEvent("on" + listener, ev);
-  else element.addEventListener(listener, ev, tf);
-}
-
 const getProducts = async () => {
   try {
     const response = await fetch("http://localhost:5000/products");
